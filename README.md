@@ -3,7 +3,7 @@ Site d'actualité
 
 ## Documentation déploiement
 
-[Procédure déploiement](/docs/deployement.md)
+[Procédure déploiement](/docs/deployment.md)
 
 ## MCD
 
