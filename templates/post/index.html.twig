@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+  <h1 style="text-align:center;">Nos Actualités</h1>
+
+  {% for post in posts %}
+  {% include 'partials/_post.html.twig' %}
+{% endfor %}
+{% endblock %}
+      
+       
+       
+        

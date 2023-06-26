@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier mon commentaire{% endblock %}
+
+{% block body %}
+    <h1>Modifier mon commentaire</h1>
+    {{ include('comment/_delete_form.html.twig') }}
+
+    {{ include('comment/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+    <a href="{{ path('app_post_show', {'id': comment.post.id }) }}">retour</a>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+<div class="card bg-light shadow my-3" style="text-align:center;">
+    <h2 class="card-header">{{ post.title }}</h2>
+    <div class="card-body">
+        <p class="card-text">{{ post.content|raw }}</p>
+    </div>
+    <div class="card-body">
+        <a class="card-link" href="{{ path('app_post_show', {"id": post.id})}}">Voir plus</a>
+    </div>
+    <div class="card-footer text-muted">
+        le {{ post.createdAt|date("d/m/Y") }} par {{ post.user.username }}
+    </div>
+</div>

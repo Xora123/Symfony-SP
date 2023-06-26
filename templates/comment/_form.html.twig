@@ -1,0 +1,8 @@
+<div class="card bg-light shadow my-3">
+    <div class="card-body">
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
+        {{ form_end(form) }}
+    </div>
+</div>

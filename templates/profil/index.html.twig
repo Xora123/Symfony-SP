@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+
+<div class="card mb-3">
+  <div class="card-header">
+    <h2>Username : {{ app.user.username }}</h2>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">
+      <div>Prénom : {{ app.user.firstname }}</div>
+    </h4>
+    <p class="card-text">
+    <div>Nom : {{ app.user.lastname }}</div>
+    </p>
+    <div>Email : {{ app.user.email }}</div>
+  </div>
+</div>
+<div>
+  <div class="card mb-3">
+    <div class="container">
+      {% if is_granted('ROLE_ADMIN') %}
+      <div class="card-header">
+        <h1>Vous êtes connecté en tant qu'administrateur</h1>
+      </div>
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item"><a href="{{ path('app_admin_post_index') }}" class="btn btn-primary">Gérer les articles</a></li>
+      <li class="list-group-item"><a href="{{ path('app_admin_user_index') }}" class="btn btn-primary">Gérer les utilisateurs</a></li>
+    </ul>
+      {% endif %}
+  
+    </div>
+    <a href="{{ path('app_profil_edit', {'id': app.user.id }) }}">Modifier mon profil</a>
+    <a href="{{ path('app_profil_edit_password', {'id': app.user.id }) }}">Modifier mon mot de passe</a>
+  </div>
+</div>
+{% endblock %}

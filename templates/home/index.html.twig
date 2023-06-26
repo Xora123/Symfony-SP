@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+  <div class="jumbotron shadow">
+    <h1 class="display-3 text-center">Bienvenue sur <span class="text-warning">PointActu</span></h1>
+    <hr class="my-4">
+    {% if is_granted('ROLE_USER') %}
+    {% endif %}
+  </div>
+
+  <h1 style="text-align:center;">Les dernières Actualités</h1>
+
+  {% for post in posts|slice(-3) %}
+  {% include 'partials/_post.html.twig' %}
+{% endfor %}
+{% endblock %}
+      
+       
+       
+        
+    

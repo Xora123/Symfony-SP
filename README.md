@@ -1,3 +1,5 @@
-# Symfony-SP
-SP Symfony 
-![MCD](https://github.com/Xora123/Symfony-SP/assets/69419842/fbf64453-5d1d-4036-8dc6-4a99eebb5adf)
+# Site d'actualité
+
+## MCD
+
+![Modèle Conceptuel de Données](docs/images/MCD.png?raw=true "Modèle Conceptuel de Données")
