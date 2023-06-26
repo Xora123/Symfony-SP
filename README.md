@@ -1,4 +1,9 @@
-# Site d'actualité
+Site d'actualité
+===
+
+## Documentation déploiement
+
+[Procédure déploiement](/docs/deployement.md)
 
 ## MCD
 
